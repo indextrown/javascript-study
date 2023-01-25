@@ -75,3 +75,35 @@ package-lock.json 파일을 이용해 복구 가능
 }
 ```
 
+# 버전관리
+.gitignore
+
+# 본격적인 시작
+1)index.html 만들고
+! + enter 키 누르면 기본적인 html 틀 만들어짐
+
+2)main.js 파일 만들기
+
+3) parcel 번들러를 이용한 개발 서버 오픈
+package.json에 들어가서 scripts를 수정
+
+before
+```
+"scripts": {
+    "test": "echo \"Error: no test specified\"&& exit 1"
+}, ```
+
+after
+
+"scripts": {
+    "dev": "parcel ./index.html"
+},
+
+```npm run dev```
+=> 터미널로 실행
+
+## 오류뜰거임 이유:
+import 키워드 사용하는 자바스크립트는 
+모듈 자바스크립트라고 부름  
+모듈 자바스크립트는 html에서 가져올 때 html에서
+type:module을 입력해서 가져와야함
