@@ -16,7 +16,7 @@ npm 사용 이유
 1) 관리 효율 증가
 2) 손쉬운 기능 고도화
 
-# 본격적인 javascript 환경 세팅
+# 본격적인 NPM 환경 세팅
 ```node --version```
 설치된 node.js 버전 확인 (Node설치하면 npm 자동 설치)
 
@@ -168,3 +168,65 @@ Minor 버전 안에서 가장 최신 버전으로 업데이트 가능
 ### 최신 버전 업데이트
 ```npm update 패키지명```
 
+# 본격적인 자바스크립트 환경 세팅
+```npm init –y``` (기본적인 질문 생략후 패키지 설치)
+
+```npm i –D parcel```
+
+package.json에서 내용 수정
+``` 
+"scripts":{
+    "dev":"parcel ./index.html",
+    "build":"parcel build ./index.html"
+  },
+```
+### dev라는 스크립트 이름으로
+parcel명령으로 시작해서 index.html 파일 기준으로
+개발서버를 오픈하겠다
+
+---
+개발서버 오픈, 테스트 = dev
+제품화, 서버 배포 = build사용
+
+---
+
+(parcel 번들러가 사용할 수 있는)
+index.html 만들어주기
+
+main.js 파일 만들고
+title 밑에 자바스크립트 넣어주기
+
+```html
+<title>Document</title>
+<script src ="./main.js">
+</script>
+<!-- main.js 연결 -->
+</head>
+```
+
+### main.js에서
+import 키워드 통해서 현재 프로젝트에 설치한 패키지를 가져와서 사용하려면 main.js 파일은 모듈이 되는 개념!!
+
+### 최종
+
+```html
+<script type ="module“
+src ="./main.js">
+</script><!-- main.js 연결 -->
+```
+
+# Tip(참고사항)
+
+만약 html body부분의 특정 태그를 자바스크립트를 통해 사용하려면 main.js가 html 구조 전체를 해석한 뒤에 동작하도록 만들어야함
+이때 사용하는 속성:defer
+
+'''
+<script type ="module“
+defer src ="./main.js">
+</script>
+'''
+                      
+'''npm run dev'''로 개발 서버 오픈
+                      
+                      
+                      
