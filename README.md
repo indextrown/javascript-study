@@ -91,9 +91,11 @@ before
 ```
 "scripts": {
     "test": "echo \"Error: no test specified\"&& exit 1"
-}, ```
+}, 
+```
 
 after
+
 ```
 "scripts": {
     "dev": "parcel ./index.html"
@@ -107,3 +109,62 @@ import 키워드 사용하는 자바스크립트는
 모듈 자바스크립트라고 부름  
 모듈 자바스크립트는 html에서 가져올 때 html에서
 type:module을 입력해서 가져와야함
+
+index.html
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type = "module" defer src = "./main.js"> </script> <!-- main.js 연결 -->
+</head>
+<body>
+   <h1>hello world</h1> 
+</body>
+</html>
+```
+
+# 부가정보
+typescript는 웹페이지에서 직접적으로 동작 불가능
+하지만 사용하는 이유는?
+여러 기능들의 도움을 받기 위해서 사용함
+
+typesrcipt => parcel => javascript
+               (변환역할)
+변환된 결과는 dist 폴더에서 확인가능
+
+
+
+
+## 유의적 버전(Semantic Versioning, SemVer)
+- 프로젝트가 개발되는 특정 시점 상태에 의미를 부여해서 숫자를 매기는 방법
+
+## Major.Minor.Patch
+ex)4.17.21            
+
+### Major: 기존 버전과 호환되지 않는 새로운 버전
+### Minor: 기존 버전과 호환되는 기능이 추가된 버전
+### Patch: 기존 버전과 호환되는 버그 및 오타등이 수정된 	버전(새로운 기능이 아닌 버그, 오타)
+
+### ^ 캐롯: 유의적 버전에서의 의미는
+: Major 버전 안에서 가장 최신 버전으로 업데이트 가능
+ex) ^4.17.21 => .17.21 변함
+=>Minor, patch만 업데이트됨
+
+### ~ 틸드
+Minor 버전 안에서 가장 최신 버전으로 업데이트 가능
+=>patch만 최신 버전으로 업데이트됨
+
+### 최신 버전 확인하기
+```npm info 패키지명```
+
+### 특정 버전 설치하기   @:캐롯
+```npm install 패키지명@4.17.19```
+
+### 최신 버전 업데이트
+```npm update 패키지명```
+
