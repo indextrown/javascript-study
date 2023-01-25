@@ -17,5 +17,38 @@ npm 사용 이유
 2) 손쉬운 기능 고도화
 
 # 본격적인 javascript 환경 세팅
-```node —version```
+```node --version```
 설치된 node.js 버전 확인 (Node설치하면 npm 자동 설치)
+
+```npm --version ```
+=> 설치된 npm 버전 확인
+-- = 플래그라고 부름 
+
+```clear or cls```
+=> 커맨드 정리
+
+
+# Npm 프로젝트 생성하기
+```npm init ```
+
+```npm init –y``` (기본적인 질문 생략후 패키지 설치)
+
+```npm install lodash```(브라우저에서 동작하는 기능)
+
+```npm install parcel —save-dev```
+parcel은 여러 패키지들을 웹 사이트에 올릴 수 있게 하나의 구조로 묶어주는 역할(bundler라고도 부름)
+
+## Tip
+
+```npm install parcel —save-dev```
+
+```npm install —save-dev parcel ```
+
+```npm install –D parcel  ```
+
+```npm i -D parcel```
+모두 같은 의미임
+
+
+
+웹사이트에서 직접적으로 동작하는 패키지가 아닌 경우 뒤에 —save-dev를 붙여줘야함(개발용)
