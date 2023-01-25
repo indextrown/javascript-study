@@ -236,14 +236,129 @@ const string1 = "Hello"
 const string2 = 'Hello'
 ```
                      
-### ` : 빽틱(템플릿 리터럴) 
-### [] : 배열 리터럴
-### 리터럴: 기호를 통해서 데이터를 만드는 방식
+#### ` : 빽틱(템플릿 리터럴) 
+##3# [] : 배열 리터럴
+#### 리터럴: 기호를 통해서 데이터를 만드는 방식
 데이터를 문자 데이터 내부에 채워넣는 용도로 사용
-### 빽틱기호 = 탬플릿
+#### 빽틱기호 = 탬플릿
 
 ```javascript
 const string3 = `Hello ${string1} ?!` 
 console.log(string3)
 ```
-### 결과값 Hello Hello ?!
+### 결과값 : Hello Hello ?!
+
+# 2. 숫자변수
+
+//숫자 데이터
+
+```javascript
+const number = -123
+console.log(number + 1)
+```
+### 결과값 : -122
+
+# 3. 부동소수점 오류와 강제형변환
+
+```javascript
+const a = 0.1
+const b = 0.2
+
+console.log( a + b ) 
+```
+### 결과값 : 0.300000000000000004
+
+### //부동소수점 오류라고 표현한다
+/* 컴퓨터는 0과 1의 2진수로 동작이 되는데 수를 표현하려면 기본적으로 10진수를 써야함
+그랬을 때 컴퓨터가 10진수를 2진수로 표현해야하기 때문에 간혹 무한소수라는  개념이 발생한다
+이를 유한하게 표현하기 위해 세부적인 값에 초과나 혹은 손실로 계산오류가 발생*/
+
+# 4. boolean + 함수
+
+//boolean(불린) = 논리 데이터
+``` javascript
+const a = true
+const b = false
+
+//불린데이터눈 특정한 상황을 분기 처리할 수 있다
+if (a) {
+    console.log('hello')
+}
+```
+### 결과값 : hello
+
+# 5. nullundefined
+####   //let: age 변수에 새로운 값이 재할당 될 수 있다 의미
+#### //null: 존재하지않거나 비어있거나 알수없다 의미
+#### //null, undefined 둘다 값이 없는 상태  
+#### //null: 명시적으로 값이 없다(직접 작성)
+#### //undefined: 암시적이다(직접 작성할일은 거의 없음)
+
+```javascript
+let age = null  
+let age2 //undefined 
+
+console.log(age)
+
+//function 키워드로 calback 함수를 추가
+setTimeout(function () {
+    age = 85
+    console.log(age)
+    console.log(age2)
+    
+}, 1000) //1초 뒤에 실행되도록 함 밀리세컨드 단위임
+//console.log(age3)
+```
+# 6. 객체
+
+```javascript
+const user = {
+    name: 'donghyeon',
+    age:85,
+    new_email:null,   //이메일 값 아직은 비어있다
+}
+
+console.log(user)
+console.log(user.name)
+console.log(user.age) 
+console.log(user.email) // undefined : 값 존재 x
+console.log(user.new_email)  // null : 값 할당 x
+
+```
+
+# 7. Array(배열)
+
+//new 키워드를 통해 호출하는 함수 = 생성자함수 또는 javascript clss라고함
+//new 키워드로 보통 배열 데이터를 만든다
+```javascript
+const fruits = new Array('Apple', 'Banana', 'Cherry')
+console.log(fruits)
+console.log(fruits[1])
+```
+
+//두번째 방법 = 리터럴 방식
+//배열(Array) 리터럴 []
+```javascript
+const comlanguage = ['c', 'java', 'javascript']
+console.log(comlanguage)
+```
+
+//배열 데이터를 인덱싱한다(특정 data를 조회한다)
+```javascript
+console.log(comlanguage[2])
+```
+
+//배열 길이 확인
+```javascript
+console.log(comlanguage.length)
+```
+
+//배열 마지막 item 조회 확인
+```javascript
+console.log(comlanguage[comlanguage.length - 1])
+```
+
+//배열첫번째 item 조회 확인
+```javascript 
+console.log(comlanguage[0])
+```
