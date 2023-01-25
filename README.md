@@ -79,10 +79,10 @@ package-lock.json 파일을 이용해 복구 가능
 .gitignore
 
 # 본격적인 시작
-1)index.html 만들고
+1) index.html 만들고
 ! + enter 키 누르면 기본적인 html 틀 만들어짐
 
-2)main.js 파일 만들기
+2) main.js 파일 만들기
 
 3) parcel 번들러를 이용한 개발 서버 오픈
 package.json에 들어가서 scripts를 수정
@@ -94,11 +94,11 @@ before
 }, ```
 
 after
-
+```
 "scripts": {
     "dev": "parcel ./index.html"
 },
-
+```
 ```npm run dev```
 => 터미널로 실행
 
